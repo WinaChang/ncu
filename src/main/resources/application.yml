@@ -1,0 +1,9 @@
+spring.application.name: ncu
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=master
+    username: sa
+    password: Aaa12345
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
