@@ -14,6 +14,22 @@ CREATE TABLE [dbo].[user](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
+
+
+
+  CREATE TABLE [data](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[full_name] [nvarchar](50) NULL,
+	[nick_name] [nvarchar](50) NULL,
+	[slogan] [nvarchar](200) NULL,
+	[price] [nvarchar](50) NULL,
+	[lock_file_path] [nvarchar](50) NULL,
+	[lock_file_name] [nvarchar](50) NULL,
+ CONSTRAINT [PK_data] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
 ```
 3. 自己随便新增資料
 4. 啟動 Backend Server
