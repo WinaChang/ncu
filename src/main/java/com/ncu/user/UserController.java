@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @PostMapping("/search")
-    public Map<String, Object> search(@Validated @RequestBody SearchVoReq request) {
+    public List<Map<String, Object>> search(@Validated @RequestBody SearchVoReq request) {
 
         String sql =
                 "select id, full_name, nick_name, slogan, price, lock_file_path, lock_file_name, shot_file_name " +
@@ -36,6 +36,6 @@ public class UserController {
 
         List<Map<String, Object>> results = jdbcTemplate.queryForList(sql);
 
-        return results.size() > 0 ? results.get(0) : new HashMap<String, Object>();
+        return results;
     }
 }
