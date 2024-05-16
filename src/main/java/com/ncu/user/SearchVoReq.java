@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SearchVoReq {
-    private String username;
-    private String password;
+    private String fullName;
+    private String verifyCode;
 }
